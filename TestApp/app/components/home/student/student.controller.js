@@ -13,7 +13,6 @@
 
         vm.stud = null;
         vm.saveStudent = saveStudent;
-        vm.newStudName = studService.getData;
         vm.getStudent = getStudent;
         vm.setStudent = setStudentData;
         vm.clearObject = clearObject;

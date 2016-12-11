@@ -6,7 +6,7 @@
 
     function homeConfig($stateProvider, $urlRouterProvider) {
 
-        $urlRouterProvider.otherwise('/home/timesheet');
+        $urlRouterProvider.otherwise('/home/student');
 
         $stateProvider
 
