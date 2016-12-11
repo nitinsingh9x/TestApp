@@ -1,0 +1,55 @@
+﻿
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-lg-offset-1">
+            <form name="studForm" ng-submit="vm.saveStudent(vm.stud)" role="form">
+                <legend>Student details</legend>
+
+                <div class="form-group">
+                    <label for="">Name</label>
+                    <input type="text" class="form-control" ng-model="vm.stud.name" placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label for="">Surname</label>
+                    <input type="text" class="form-control" ng-model="vm.stud.surname" placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label for="">Roll</label>
+                    <input type="text" class="form-control" ng-model="vm.stud.roll" placeholder="Input field">
+                </div>
+                <div class="form-group">
+                    <label for="">Phone</label>
+                    <input type="text" class="form-control" ng-model="vm.stud.phone" placeholder="Input field">{{vm.stud.phone | number}}
+                </div>
+                <button ng-if="vm.stud.StudentID > 0" type="button" ng-click="vm.clearObject()" class="btn btn-primary">New</button>
+                <button ng-if="vm.stud.StudentID > 0" type="button" ng-click="vm.setStudent(vm.stud)" class="btn btn-primary">Update</button>
+                <button ng-if="!vm.stud.StudentID" type="submit" class="btn btn-primary">Submit</button>
+                <button ng-if="!vm.stud.StudentID" type="button" ng-click="vm.clearObject()" class="btn btn-primary">Clear</button>
+            </form>
+            <br /><br />
+        </div>
+        <div class="col-md-4 col-lg-offset-1">
+            <div class="table-responsive">
+                <table class="table table-hover">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Surname</th>
+                            <th>Roll</th>
+                            <th>Phone</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="item in vm.studentList">
+                            <td ng-bind="item.name"></td>
+                            <td ng-bind="item.surname"></td>
+                            <td ng-bind="item.roll"></td>
+                            <td ng-bind="item.phone"></td>
+                            <td ><a class="btn btn-primary"ng-bind="item.StudentID" ng-click="vm.getStudent(item.StudentID)"></a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>

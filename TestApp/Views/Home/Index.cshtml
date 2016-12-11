@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+ }
+<html xmlns="http://www.w3.org/1999/xhtml" ng-app="app">
+<head>
+    <title></title>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" media="screen" href="//netdna.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+    <link href="~/Scripts/angular-loading-bar/build/loading-bar.min.css" rel="stylesheet" />
+    <script src="//code.jquery.com/jquery.js"></script>
+    <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+    @*Angular*@
+    <script src="~/Scripts/angular/angular.js"></script>
+    <script src="~/Scripts/angular-ui-router.min.js"></script>
+    <script src="~/Scripts/angular-loading-bar/build/loading-bar.min.js"></script>
+</head>
+<body>
+    <div ui-view=""></div>
+    @Scripts.Render("~/app")
+</body>
+</html>
